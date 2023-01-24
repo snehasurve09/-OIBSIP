@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculator</title>
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+<form name="calculator">
+        <table>
+        <tr>
+        <td colspan="5"><input name="display" class="screen" value="0"></td>
+        </tr>
+        <tr>                                  
+        <td><input type="button" value="  C  " onclick="this.form.display.value = 0 "></td>
+        <td><input type="button" value="DEL" onclick="deleteChar(this.form.display)"></td>
+        <td colspan="2"><input type="button" value="          Enter           " NAME="Enter" onclick="if (checkNum(this.form.display.value)) { answere(this.form) }"></td>
+        </tr> 
+        <tr>
+        <td><input type="button" value="  7  " onclick="add_value(this.form.display, '7')"></td>
+        <td><input type="button" value="  8  " onclick="add_value(this.form.display, '8')"></td>
+        <td><input type="button" value="  9  " onclick="add_value(this.form.display, '9')"></td>
+        <td><input type="button" value="   /   " onclick="add_value(this.form.display, '/')"></td>
+        </tr>                                  
+        <tr>                                   
+        <td><input type="button" value="  4  " onclick="add_value(this.form.display, '4')"></td>
+        <td><input type="button" value="  5  " onclick="add_value(this.form.display, '5')"></td>
+        <td><input type="button" value="  6  " onclick="add_value(this.form.display, '6')"></td>
+        <td><input type="button" value="   *   " onclick="add_value(this.form.display, '*')"></td>
+        </tr>                                   
+        <tr>                                    
+        <td><input type="button" value="  1  " onclick="add_value(this.form.display, '1')"></td>
+        <td><input type="button" value="  2  " onclick="add_value(this.form.display, '2')"></td>
+        <td><input type="button" value="  3  " onclick="add_value(this.form.display, '3')"></td>
+        <td><input type="button" value="   -   " onclick="add_value(this.form.display, '-')"></td>
+        </tr>                                  
+        <tr>                                   
+        <td><input type="button" value="  0  " onclick="add_value(this.form.display, '0')"></td>
+        <td><input type="button" value="   .  " onclick="add_value(this.form.display, '.')"></td>
+        <td><input type="button" value=" +/- " onclick="changeSign(this.form.display)"></td>
+        <td><input type="button" value="   +  " onclick="add_value(this.form.display, '+')"></td>
+        </tr>                                  
+        <tr>                                   
+        <td><input type="button" value="   (    " onclick="add_value(this.form.display, '(')"></td>
+        <td><input type="button" value=" sqrt" onclick="if (checkNum(this.form.display.value)) { sqrt(this.form) }"></td>
+        <td><input type="button" value="  sq  " onclick="if (checkNum(this.form.display.value)) { square(this.form) }"></td>
+        <td><input type="button" value="   )   " onclick="add_value(this.form.display, ')')"></td>
+        </tr>                                 
+        </table>
+         
+</form>
+    <script src="./script.js"></script>
+</body>
